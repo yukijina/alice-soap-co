@@ -1,5 +1,5 @@
-import workImg from '../assets/work-1.jpeg';
-import avatarImg from '../assets/avatar.png';
+import workImg from '../../../assets/work-1.jpeg';
+import avatarImg from '../../../assets/avatar.png';
 
 function OurRoot() {
   return (

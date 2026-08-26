@@ -1,6 +1,6 @@
 // place holder image
-import soapImg from '../assets/aux-1a.png';
-import Button from './Button';
+import soapImg from '../../../assets/aux-1a.png';
+import Button from '../../../components/Button';
 
 function Favorite() {
   return (

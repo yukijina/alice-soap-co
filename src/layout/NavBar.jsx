@@ -9,10 +9,12 @@ function NavBar() {
         <li>
           <NavLink to='/product'>Shop</NavLink>
         </li>
-        <li>Our Story</li>
-        <li>Farmer's Market</li>
-        <li>Soap Quiz</li>
-        <li>Cart</li>
+        <li>
+          <NavLink to='/ourstory'>Our Story</NavLink>
+        </li>
+        <li tabIndex='0'>Farmer's Market</li>
+        <li tabIndex='0'>Soap Quiz</li>
+        <li tabIndex='0'>Cart</li>
       </ul>
     </nav>
   );

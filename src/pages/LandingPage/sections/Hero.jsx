@@ -1,6 +1,6 @@
 import { CiHeart } from 'react-icons/ci';
-import heroImg from '../assets/hero.jpeg';
-import Button from './Button';
+import heroImg from '../../../assets/hero.jpeg';
+import Button from '../../../components/Button';
 
 function Hero() {
   return (

@@ -1,8 +1,8 @@
 import { CiInstagram } from 'react-icons/ci';
-import Image1 from '../assets/soap-3.jpeg';
-import Image2 from '../assets/soap-6.jpeg';
-import Image3 from '../assets/soap-10.jpeg';
-import Image4 from '../assets/store-1.jpeg';
+import Image1 from '../../../assets/soap-3.jpeg';
+import Image2 from '../../../assets/soap-6.jpeg';
+import Image3 from '../../../assets/soap-10.jpeg';
+import Image4 from '../../../assets/store-1.jpeg';
 
 function Stories() {
   return (
