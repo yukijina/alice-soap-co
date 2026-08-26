@@ -2,19 +2,23 @@ import { useState } from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import AppLayout from './layout/AppLayout';
 import PageNotFound from './pages/PageNotFound';
-import Home from './pages/Home';
-import Product from './pages/Product';
+import Home from './pages/LandingPage/Home';
+import Product from './features/product/Product';
+import OurStory from './pages/OurStory';
 
 const router = createBrowserRouter([
   {
     element: <AppLayout />,
     errorElement: <PageNotFound />,
+
+    // Outlet
     children: [
       {
         path: '/',
         element: <Home />,
       },
-      { path: '/product', element: <Product /> },
+      { path: '/shop-all', element: <Product /> },
+      { path: '/our-story', element: <OurStory /> },
     ],
   },
 ]);

@@ -7,6 +7,7 @@ function AppLayout() {
     <div>
       <NavBar />
       <div>
+        {/* check App.jsx for outlet contents  */}
         <Outlet />
       </div>
       <Footer />
