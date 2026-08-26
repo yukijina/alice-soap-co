@@ -1,0 +1,94 @@
+{
+  "soaps": [
+    {
+      "id": "0001",
+      "name": "Lavender Calm",
+      "details": "A gentle, handcrafted soap with a soft pastel lavender tone, designed for a relaxing everyday bathing ritual.",
+      "scentNote": "Lavender, soft floral, herbal",
+      "ingredients": [
+        "Olive Oil",
+        "Coconut Oil",
+        "Shea Butter",
+        "Lavender Essential Oil",
+        "Kaolin Clay",
+        "Dried Lavender"
+      ],
+      "image": "https://images.unsplash.com/photo-1600857544200-b2f666a9a2ec?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "id": "0002",
+      "name": "Rose Garden",
+      "details": "A luxurious floral soap with a creamy lather and delicate rose-inspired fragrance.",
+      "scentNote": "Rose, geranium, powdery floral",
+      "ingredients": [
+        "Olive Oil",
+        "Coconut Oil",
+        "Sweet Almond Oil",
+        "Rose Essential Oil",
+        "Rose Clay",
+        "Dried Rose Petals"
+      ],
+      "image": "https://images.unsplash.com/photo-1600857544200-b2f666a9a2ec?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "id": "0003",
+      "name": "Citrus Grove",
+      "details": "A bright and refreshing handcrafted soap inspired by sunny California citrus gardens.",
+      "scentNote": "Sweet orange, lemon, fresh citrus",
+      "ingredients": [
+        "Olive Oil",
+        "Coconut Oil",
+        "Avocado Oil",
+        "Sweet Orange Essential Oil",
+        "Lemon Essential Oil",
+        "Orange Peel"
+      ],
+      "image": "https://images.unsplash.com/photo-1600857544200-b2f666a9a2ec?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "id": "0004",
+      "name": "Oat & Honey",
+      "details": "A creamy, comforting bar with finely ground oats and a warm honey-inspired aroma.",
+      "scentNote": "Honey, vanilla, warm oat",
+      "ingredients": [
+        "Olive Oil",
+        "Coconut Oil",
+        "Shea Butter",
+        "Colloidal Oatmeal",
+        "Honey",
+        "Vanilla Essential Oil"
+      ],
+      "image": "https://images.unsplash.com/photo-1600857544200-b2f666a9a2ec?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "id": "0005",
+      "name": "Eucalyptus Mint",
+      "details": "A refreshing botanical soap that creates a clean, invigorating feeling with every wash.",
+      "scentNote": "Eucalyptus, peppermint, cool herbal",
+      "ingredients": [
+        "Olive Oil",
+        "Coconut Oil",
+        "Jojoba Oil",
+        "Eucalyptus Essential Oil",
+        "Peppermint Essential Oil",
+        "French Green Clay"
+      ],
+      "image": "https://images.unsplash.com/photo-1600857544200-b2f666a9a2ec?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "id": "0006",
+      "name": "Vanilla Blossom",
+      "details": "A softly sweet luxury bar with a creamy texture and an elegant floral finish.",
+      "scentNote": "Vanilla, jasmine, soft musk",
+      "ingredients": [
+        "Olive Oil",
+        "Coconut Oil",
+        "Cocoa Butter",
+        "Vanilla Extract",
+        "Jasmine Essential Oil",
+        "White Kaolin Clay"
+      ],
+      "image": "https://images.unsplash.com/photo-1600857544200-b2f666a9a2ec?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    }
+  ]
+}
