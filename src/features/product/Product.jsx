@@ -1,24 +1,25 @@
-import { useLoaderData } from 'react-router-dom';
-import { getProducts } from '../../services/apiShop';
-import ProductItem from './ProductItem';
+import Button from '../../components/Button';
 
-function Product() {
-  const products = useLoaderData();
+function Product({ soap }) {
   return (
-    <div className='section-px mt-20 my-20'>
-      <h2>Shop All</h2>
-      <section className='flex flex-wrap gap-3 justify-center items-center mt-20'>
-        {products.map((product) => (
-          <ProductItem soap={product} key={product.id} />
-        ))}
-      </section>
+    <div className='bg-orange-100 rounded-2xl py-5 px-3 w-100 h-120'>
+      <div className='flex justify-center pb-12'>
+        <img
+          src={soap.image}
+          alt={soap.title}
+          className='size-60 object-contain'
+        />
+      </div>
+      <h5>{soap.title}</h5>
+      <p className='text-stone-500 pb-3'>{soap.category}</p>
+      <p className='font-semibold'>US$ {soap.price}</p>
+      <div>
+        <Button to='#' type='dark'>
+          Add to Cart
+        </Button>
+      </div>
     </div>
   );
-}
-
-export async function loader() {
-  const items = await getProducts();
-  return items;
 }
 
 export default Product;
