@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import AppLayout from './layout/AppLayout';
-import PageNotFound from './pages/PageNotFound';
+import Error from './pages/Error';
 import Home from './pages/LandingPage/Home';
 import Products, {
   loader as productsLoader,
@@ -11,7 +11,7 @@ import OurStory from './pages/OurStory';
 const router = createBrowserRouter([
   {
     element: <AppLayout />,
-    errorElement: <PageNotFound />,
+    errorElement: <Error />,
 
     // Outlet
     children: [
