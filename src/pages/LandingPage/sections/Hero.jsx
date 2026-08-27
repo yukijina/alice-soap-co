@@ -13,8 +13,8 @@ function Hero() {
           botanicals, mineral-rich clays, and local olive oil. Hand-poured,
           hand-cut, and slow-cured right here in San Francisco.
         </p>
-        <div className='my-10'>
-          <Button to='/product' type='dark'>
+        <div className='my-10 flex gap-1'>
+          <Button to='/shop-all' type='dark'>
             Shop the Collection
           </Button>
           <Button to='#' type='light'>
