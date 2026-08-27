@@ -7,10 +7,10 @@ function NavBar() {
       <Logo />
       <ul className='flex flex-row gap-6'>
         <li>
-          <NavLink to='/product'>Shop</NavLink>
+          <NavLink to='/shop-all'>Shop</NavLink>
         </li>
         <li>
-          <NavLink to='/ourstory'>Our Story</NavLink>
+          <NavLink to='/our-story'>Our Story</NavLink>
         </li>
         <li tabIndex='0'>Farmer's Market</li>
         <li tabIndex='0'>Soap Quiz</li>
