@@ -42,7 +42,8 @@
     font-size: var(--text-sm);
     padding-bottom: 1rem;
   }
-  p {
+  p,
+  td {
     font-family: var(--font-instrument);
     font-weight: 300;
   }
