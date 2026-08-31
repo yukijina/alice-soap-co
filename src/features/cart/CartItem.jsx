@@ -2,7 +2,7 @@ import { CiTrash } from 'react-icons/ci';
 
 function CartItem({ item }) {
   console.log(item);
-  const { id, itemName, quantity, unitPrice, totalPrice, image } = item;
+  const { itemId, itemName, quantity, unitPrice, totalPrice, image } = item;
   return (
     <div className='mb-3 bg-orange-100'>
       <div className='flex justify-between px-2 py-3'>
@@ -12,10 +12,9 @@ function CartItem({ item }) {
         <p className='self-center'>{itemName}</p>
         <div className='flex flex-col justify-between'>
           <CiTrash className='self-end text-2xl' />
-          <div className=''>
-            <p>Quantity {quantity}</p>
-            <p>${totalPrice}</p>
-          </div>
+          <p>Quantity</p>
+          <p className='self-center'>{quantity}</p>
+          <p>${totalPrice}</p>
         </div>
       </div>
     </div>
