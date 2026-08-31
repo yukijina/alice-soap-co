@@ -8,7 +8,7 @@ function Product({ soap }) {
 
   function handleAddToCart() {
     const newItem = {
-      id: id,
+      itemId: id,
       itemName: title,
       quantity: 1,
       unitPrice: price,
@@ -17,6 +17,7 @@ function Product({ soap }) {
     };
     dispatch(addItem(newItem));
   }
+
   return (
     <div className='bg-orange-100 rounded-2xl py-5 px-3 w-100 h-120'>
       <div className='flex justify-center pb-12'>
