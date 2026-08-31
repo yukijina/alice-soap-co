@@ -24,6 +24,13 @@ function Button({ children, to, type, onClick }) {
         {children}
       </Link>
     );
+
+  if (onClick)
+    return (
+      <button onClick={onClick} className={styles[type]}>
+        {children}
+      </button>
+    );
 }
 
 export default Button;
