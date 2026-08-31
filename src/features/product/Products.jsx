@@ -6,7 +6,7 @@ import HeaderImg from '../../assets/soap-11.jpeg';
 function Products() {
   const products = useLoaderData();
   return (
-    <div className='section-px mt-20 my-20'>
+    <div className='section-px my-20'>
       <div
         className='w-full h-50 bg-center bg-cover bg-stone-800 opacity-80'
         style={{
