@@ -2,10 +2,10 @@ import { useSelector } from 'react-redux';
 import Cart from '../features/cart/Cart';
 import CheckoutSummary from '../features/checkout/CheckoutSummary';
 import EmptyCart from '../features/cart/EmptyCart';
-import { getTotalCartPrice } from '../features/Cart/cartSlice';
+import { getCart, getTotalCartPrice } from '../features/Cart/cartSlice';
 
 function CartPage() {
-  const cart = useSelector((state) => state.cart.cart);
+  const cart = useSelector(getCart);
   const totalCartPrice = useSelector(getTotalCartPrice);
 
   if (!cart.length) return <EmptyCart />;
