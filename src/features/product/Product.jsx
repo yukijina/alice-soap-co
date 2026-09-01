@@ -1,10 +1,14 @@
 import { useDispatch } from 'react-redux';
+import { useState } from 'react';
+import { addItem } from '../cart/cartSlice';
 import Button from '../../components/Button';
-import { addItem } from '../Cart/cartSlice';
+import Popup from '../../components/Popup';
+import { CiFaceSmile } from 'react-icons/ci';
 
 function Product({ soap }) {
   const { id, title, image, category, price } = soap;
   const dispatch = useDispatch();
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
 
   function handleAddToCart() {
     const newItem = {
@@ -16,6 +20,12 @@ function Product({ soap }) {
       image,
     };
     dispatch(addItem(newItem));
+    setIsPopupOpen(true);
+
+    // Close modal in 1 second
+    setTimeout(() => {
+      setIsPopupOpen(false);
+    }, 1000);
   }
 
   return (
@@ -30,6 +40,15 @@ function Product({ soap }) {
       <Button type='dark' onClick={handleAddToCart}>
         Add to Cart
       </Button>
+
+      {/* Popup Modal for deleting item */}
+      <Popup isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)}>
+        <div className='flex items-center justify-center'>
+          <p>The item has been added to your cart</p>
+          &nbsp;
+          <CiFaceSmile />
+        </div>
+      </Popup>
     </div>
   );
 }
