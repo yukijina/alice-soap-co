@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 import Logo from '../components/Logo';
 import { NavLink } from 'react-router-dom';
-import { getTotalQuantity } from '../features/Cart/cartSlice';
+import { getTotalQuantity } from '../features/cart/cartSlice';
 
 function NavBar() {
   const quantityInCart = useSelector(getTotalQuantity);
