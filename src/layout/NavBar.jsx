@@ -1,9 +1,10 @@
 import { useSelector } from 'react-redux';
 import Logo from '../components/Logo';
 import { NavLink } from 'react-router-dom';
+import { getTotalQuantity } from '../features/Cart/cartSlice';
 
 function NavBar() {
-  const quantityInCart = useSelector((state) => state.cart.cart).length;
+  const quantityInCart = useSelector(getTotalQuantity);
 
   return (
     <nav className='flex flex-row items-center justify-between py-5 section-px'>
