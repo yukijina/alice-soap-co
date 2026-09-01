@@ -1,5 +1,5 @@
 function CheckoutSummary({ totalCartPrice }) {
-  console.log(totalCartPrice);
+  // console.log(totalCartPrice);
   const shippingCost = 8;
   const tax = 0;
   const totalPrice = totalCartPrice + shippingCost + tax;
