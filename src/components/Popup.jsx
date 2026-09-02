@@ -12,7 +12,7 @@ function Popup({ isOpen, onClose, children }) {
       onClick={onClose}
     >
       <div
-        className='relative w-full max-w-md scale-100 rounded-lg bg-white p-6 shadow-xl transition-transform animate-in fade-in zoom-in-95 duration-200 max-h-[40vh]'
+        className='relative w-full max-w-md scale-100 rounded-lg bg-amber-50 p-6 shadow-xl transition-transform animate-in fade-in zoom-in-95 duration-200 max-h-[50vh]'
         onClick={handleContainerClick}
       >
         {/* Close button */}
@@ -24,7 +24,7 @@ function Popup({ isOpen, onClose, children }) {
         </button>
 
         {/* Content */}
-        <div className='mt-12 text-gray-600 flex flex-col items-center '>
+        <div className='absolute inset-0 m-auto w-90 text-gray-600 flex flex-col items-center justify-center'>
           {children}
         </div>
       </div>
