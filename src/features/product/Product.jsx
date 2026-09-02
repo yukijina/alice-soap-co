@@ -1,6 +1,10 @@
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useState } from 'react';
-import { addItem } from '../cart/cartSlice';
+import {
+  addItem,
+  getCurrentQuantityById,
+  increaseItemQuantity,
+} from '../cart/cartSlice';
 import Button from '../../components/Button';
 import Popup from '../../components/Popup';
 import { CiFaceSmile } from 'react-icons/ci';
@@ -9,6 +13,8 @@ function Product({ soap }) {
   const { id, title, image, category, price } = soap;
   const dispatch = useDispatch();
   const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const currentQuantity = useSelector(getCurrentQuantityById(id));
+  const isInCart = currentQuantity > 0;
 
   function handleAddToCart() {
     const newItem = {
@@ -25,7 +31,17 @@ function Product({ soap }) {
     // Close modal in 1 second
     setTimeout(() => {
       setIsPopupOpen(false);
-    }, 1000);
+    }, 1500);
+  }
+
+  function handleIncreaseQuantity() {
+    dispatch(increaseItemQuantity(id));
+    setIsPopupOpen(true);
+
+    // Close modal in 1 second
+    setTimeout(() => {
+      setIsPopupOpen(false);
+    }, 1500);
   }
 
   return (
@@ -37,7 +53,11 @@ function Product({ soap }) {
       <p className='text-stone-500 mb-3'>{category}</p>
       <p className='font-semibold mb-2'>US$ {price}</p>
 
-      <Button type='dark' onClick={handleAddToCart}>
+      {/* If the item is already in the cart, item's quantity is increase, if not. it will be added to the cart */}
+      <Button
+        type='dark'
+        onClick={isInCart ? handleIncreaseQuantity : handleAddToCart}
+      >
         Add to Cart
       </Button>
 
