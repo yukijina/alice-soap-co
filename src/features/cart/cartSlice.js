@@ -24,7 +24,6 @@ const cartSlice = createSlice({
       state.cart.push(action.payload);
     },
     deleteItem(state, action) {
-      console.log(action);
       state.cart = state.cart.filter((item) => item.itemId !== action.payload);
     },
     increaseItemQuantity(state, action) {
@@ -62,3 +61,7 @@ export const getTotalQuantity = (state) =>
 
 export const getTotalCartPrice = (state) =>
   state.cart.cart.reduce((sum, item) => sum + item.totalPrice, 0);
+
+// if item exist, it returns quantity, if not, return to 0
+export const getCurrentQuantityById = (id) => (state) =>
+  state.cart.cart.find((item) => item.itemId === id)?.quantity ?? 0;
