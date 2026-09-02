@@ -62,14 +62,9 @@ function CartItem({ item }) {
           <p>
             Are you sure if you'd like to remove this product from your cart?
           </p>
-          <button
-            className='inline-block text-sm rounded-full font-semi
-            bold tracking-wide transition-colors duration-300 focus:outline-none focus:ring focus:ring-taupe-700 focus:ring-offset-2  bg-taupe-800 text-slate-50 hover:bg-taupe-700 px-6 py-3 mt-5'
-            onClick={handleCloseAndDecrease}
-            // onClick={() => setIsPopupOpen(false)}
-          >
+          <Button type='dark' onClick={handleCloseAndDecrease}>
             Confirm
-          </button>
+          </Button>
         </Popup>
       </div>
     </div>
