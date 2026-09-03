@@ -1,8 +1,11 @@
+import { useSelector } from 'react-redux';
+import { getTotalCartPrice } from '../cart/cartSlice';
 import { useLocation } from 'react-router-dom';
 import Button from '../../components/Button';
 
-function CheckoutSummary({ totalCartPrice }) {
+function CheckoutSummary() {
   // console.log(totalCartPrice);
+  const totalCartPrice = useSelector(getTotalCartPrice);
   const shippingCost = 8;
   const tax = 0;
   const totalPrice = totalCartPrice + shippingCost + tax;
