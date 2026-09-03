@@ -1,12 +1,17 @@
+import { useLocation } from 'react-router-dom';
+import Button from '../../components/Button';
+
 function CheckoutSummary({ totalCartPrice }) {
   // console.log(totalCartPrice);
   const shippingCost = 8;
   const tax = 0;
   const totalPrice = totalCartPrice + shippingCost + tax;
+  const location = useLocation();
+  console.log(location.pathname);
 
   return (
-    <div>
-      <table className='table-auto'>
+    <div className='flex flex-col items-center'>
+      <table className='table-auto mb-5'>
         <thead>
           <tr>
             <th className='text-lg pb-10'>Order Summary</th>
@@ -34,6 +39,18 @@ function CheckoutSummary({ totalCartPrice }) {
           </tr>
         </tbody>
       </table>
+
+      {location.pathname === '/cart' && (
+        <Button to='/checkout' type='dark'>
+          Proceed to checkout
+        </Button>
+      )}
+
+      {location.pathname === '/checkout' && (
+        <Button to='#' type='dark'>
+          Complete payment with Venmo
+        </Button>
+      )}
     </div>
   );
 }
