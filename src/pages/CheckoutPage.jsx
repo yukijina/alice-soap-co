@@ -1,9 +1,9 @@
-import AddressForm from '../features/address/addressForm';
+import AddressForm from '../features/address/AddressForm';
 import CheckoutSummary from '../features/checkout/CheckoutSummary';
 
 function CheckoutPage() {
   return (
-    <section className='section-px my-20 h-screen'>
+    <section className='section-px my-20 flex justify-center gap-20'>
       <AddressForm />
       <CheckoutSummary />
     </section>
