@@ -34,7 +34,6 @@ const fakeCart = [
 function Cart({ cart }) {
   // const cart = fakeCart;
   // const cart = useSelector((state) => state.cart.cart);
-  console.log(cart);
 
   return (
     <div className='basis-2xl'>
