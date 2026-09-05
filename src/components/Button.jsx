@@ -32,6 +32,8 @@ function Button({ children, to, type, onClick }) {
         {children}
       </button>
     );
+
+  return <button className={styles[type]}>{children}</button>;
 }
 
 export default Button;
