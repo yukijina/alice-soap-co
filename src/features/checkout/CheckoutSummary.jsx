@@ -48,12 +48,6 @@ function CheckoutSummary() {
           Proceed to checkout
         </Button>
       )}
-
-      {location.pathname === '/checkout' && (
-        <Button to='#' type='dark'>
-          Complete payment with Venmo
-        </Button>
-      )}
     </div>
   );
 }
