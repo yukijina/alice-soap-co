@@ -8,6 +8,8 @@ import Products, {
 import OurStoryPage from './pages/OurStoryPage';
 import CartPage from './pages/CartPage';
 import CheckoutPage from './pages/CheckoutPage';
+import { action as createOrderAction } from './features/address/AddressForm';
+import OrderConfirmationPage from './pages/OrderConfirmationPage';
 
 const router = createBrowserRouter([
   {
@@ -27,7 +29,12 @@ const router = createBrowserRouter([
         loader: productsLoader,
       },
       { path: '/cart', element: <CartPage /> },
-      { path: '/checkout', element: <CheckoutPage /> },
+      {
+        path: '/checkout',
+        element: <CheckoutPage />,
+        action: createOrderAction,
+      },
+      { path: '/order-confirmation', element: <OrderConfirmationPage /> },
       { path: '/our-story', element: <OurStoryPage /> },
     ],
   },
