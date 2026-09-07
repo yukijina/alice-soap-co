@@ -9,7 +9,7 @@ import Button from '../../components/Button';
 import Popup from '../../components/Popup';
 import { CiFaceSmile } from 'react-icons/ci';
 
-function Product({ soap }) {
+function ProductCard({ soap }) {
   const { id, title, image, category, price } = soap;
   const dispatch = useDispatch();
   const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -73,4 +73,4 @@ function Product({ soap }) {
   );
 }
 
-export default Product;
+export default ProductCard;
