@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { Form, redirect, useNavigation } from 'react-router-dom';
+import { Form, redirect, useActionData, useNavigation } from 'react-router-dom';
 import { createOrder } from '../../services/apiShop';
 import { clearCart, getCart, getTotalCartPrice } from '../cart/cartSlice';
 import store from '../../store';
@@ -11,12 +11,18 @@ const isValidPhone = (str) =>
     str
   );
 
+// check valid zipcode
+const isValidZipCode = (str) => /^[0-9]{5}(?:-[0-9]{4})?$/.test(str);
+
 function AddressForm() {
   const navigation = useNavigation();
   const isSubmitting = navigation.state === 'submitting';
 
   const cart = useSelector(getCart);
   const dispatch = useDispatch();
+
+  // from react-router. If there is an error in action, it immediately comes here.
+  const formErrors = useActionData();
 
   // const cart = [
   //   {
@@ -97,6 +103,11 @@ function AddressForm() {
             id='phone'
             required
           />
+          {formErrors?.phone && (
+            <p className='mt-2 rounded-md bg-red-100 p-2 text-xs text-red-700'>
+              {formErrors.phone}
+            </p>
+          )}
         </div>
 
         <div className='relative mb-2 flex flex-col gap-2'>
@@ -143,6 +154,11 @@ function AddressForm() {
               required
             />
           </div>
+          {formErrors?.zipCode && (
+            <p className='mt-2 rounded-md bg-red-100 p-2 text-xs text-red-700 w-50'>
+              {formErrors.zipCode}
+            </p>
+          )}
         </div>
         <div>
           {/* include cart data and totalPrice in submit form */}
@@ -159,18 +175,36 @@ function AddressForm() {
 
 // once the form is submitted it is called by react-router
 export async function action({ request }) {
+  const orderNumber = String(Math.floor(Math.random() * 100000)).padStart(
+    5,
+    '0'
+  );
   const formData = await request.formData();
   // convert to object
   const data = Object.fromEntries(formData);
-  console.log(data);
   const order = {
     ...data,
     cart: JSON.parse(data.cart),
+    orderNumber,
   };
 
-  console.log(order.cart);
+  console.log(order.orderNumber);
+  const errors = {};
+  if (!isValidPhone(order.phone))
+    errors.phone =
+      'Please input correct phone number. It is used for shipping instruction.';
+
+  if (!isValidZipCode(order.zipCode))
+    errors.zipCode = 'Please input correct zip code.';
+
+  if (Object.keys(errors).length > 0) return errors;
+
+  console.log(errors);
+  // if there is no errors, create new order
   const newOrder = await createOrder(order);
   store.dispatch(clearCart());
+
+  // after completion, it will redirect
   return redirect(`/order-confirmation`);
 }
 
