@@ -1,6 +1,6 @@
 import { useLoaderData } from 'react-router-dom';
 import { getProducts } from '../../services/apiShop';
-import Product from './Product';
+import ProductCard from './ProductCard';
 import HeaderImg from '../../assets/soap-11.jpeg';
 
 function Products() {
@@ -18,7 +18,7 @@ function Products() {
 
       <section className='flex flex-wrap gap-3 justify-center items-center mt-20'>
         {products.map((product) => (
-          <Product soap={product} key={product.id} />
+          <ProductCard soap={product} key={product.id} />
         ))}
       </section>
     </div>
