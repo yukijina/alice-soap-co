@@ -10,6 +10,7 @@ import CartPage from './pages/CartPage';
 import CheckoutPage from './pages/CheckoutPage';
 import { action as createOrderAction } from './features/address/AddressForm';
 import OrderConfirmationPage from './pages/OrderConfirmationPage';
+import ProductDetails from './features/product/ProductDetails';
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,7 @@ const router = createBrowserRouter([
         element: <Products />,
         loader: productsLoader,
       },
+      { path: '/shop-all/:productId', element: <ProductDetails /> },
       { path: '/cart', element: <CartPage /> },
       {
         path: '/checkout',
