@@ -32,6 +32,6 @@ dist-ssr
 
 # Ignore all personal notes and scratchpads
 notes.txt
-*.notes.md
+*notes.md
 scratch.*
 
