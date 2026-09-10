@@ -5,12 +5,13 @@ import {
   getCurrentQuantityById,
   increaseItemQuantity,
 } from '../cart/cartSlice';
+import { Link } from 'react-router-dom';
 import Button from '../../components/Button';
 import Popup from '../../components/Popup';
 import { CiFaceSmile } from 'react-icons/ci';
 
-function ProductCard({ soap }) {
-  const { id, title, image, category, price } = soap;
+function ProductCard({ product }) {
+  const { id, name, description, scentNote, ingredients, image } = product;
   const dispatch = useDispatch();
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const currentQuantity = useSelector(getCurrentQuantityById(id));
@@ -19,10 +20,10 @@ function ProductCard({ soap }) {
   function handleAddToCart() {
     const newItem = {
       itemId: id,
-      itemName: title,
+      itemName: name,
       quantity: 1,
-      unitPrice: price,
-      totalPrice: price * 1,
+      // unitPrice: price,
+      // totalPrice: price * 1,
       image,
     };
     dispatch(addItem(newItem));
@@ -45,13 +46,18 @@ function ProductCard({ soap }) {
   }
 
   return (
-    <div className='bg-orange-100 rounded-2xl py-5 px-3 w-100 h-120'>
+    <div className='isolate relative bg-orange-100 rounded-2xl py-5 px-3 w-100 h-120'>
       <div className='flex justify-center pb-12'>
-        <img src={image} alt={title} className='size-60 object-contain' />
+        <img src={image} alt={name} className='size-60 object-contain' />
       </div>
-      <h5>{title}</h5>
-      <p className='text-stone-500 mb-3'>{category}</p>
-      <p className='font-semibold mb-2'>US$ {price}</p>
+      <h5>
+        <Link to={`/shop-all/${id}`}>
+          <span className='absolute inset-0 z-10'></span>
+          {name}
+        </Link>
+      </h5>
+      <p className='text-stone-500 mb-3'>{scentNote}</p>
+      <p className='font-semibold mb-2'>US$ defalt Price</p>
 
       {/* If the item is already in the cart, item's quantity is increase, if not. it will be added to the cart */}
       <Button
