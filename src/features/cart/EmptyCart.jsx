@@ -1,11 +1,11 @@
-import BasketImg from '../../assets/empty-cart-2.png';
+import emptyCartImg from '../../assets/empty-cart.png';
 import Button from '../../components/Button';
 
 function EmptyCart() {
   return (
     <div className='flex flex-col items-center justify-center h-screen'>
       <div>
-        <img src={BasketImg} alt='Empty basket' className='w-200' />
+        <img src={emptyCartImg} alt='Empty basket' className='w-200' />
       </div>
       <h2>Your cart is empty</h2>
       <p>Looks like you haven't added any soaps yet.</p>

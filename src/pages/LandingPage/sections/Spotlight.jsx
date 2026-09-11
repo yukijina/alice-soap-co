@@ -1,4 +1,4 @@
-import heroImg from '../../../assets/hero.jpeg';
+import hero from '../../../assets/hero.jpeg';
 import Button from '../../../components/Button';
 
 function Spotlight() {
@@ -6,7 +6,7 @@ function Spotlight() {
     <main className='my-20 flex items-center gap-20 section-px'>
       <div>
         <img
-          src={heroImg}
+          src={hero}
           alt='soap'
           className='w-164 [clip-path:inset(0%_round_60px_60px_60px_60px)]'
         />

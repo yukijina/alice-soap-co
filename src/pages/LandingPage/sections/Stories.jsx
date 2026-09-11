@@ -1,8 +1,8 @@
 import { CiInstagram } from 'react-icons/ci';
-import Image1 from '../../../assets/soap-3.jpeg';
-import Image2 from '../../../assets/soap-6.jpeg';
-import Image3 from '../../../assets/soap-10.jpeg';
-import Image4 from '../../../assets/store-1.jpeg';
+import story1 from '../../../assets/story-1.jpeg';
+import story2 from '../../../assets/story-2.jpeg';
+import story3 from '../../../assets/story-3.jpeg';
+import story4 from '../../../assets/story-4.jpeg';
 
 function Stories() {
   return (
@@ -18,17 +18,17 @@ function Stories() {
 
       <div className='flex gap-10'>
         <div className='flex-1'>
-          <img src={Image1} alt='soap name' className='rounded-4xl w-full' />
+          <img src={story1} alt='soap name' className='rounded-4xl w-full' />
         </div>
 
         <div className='flex-1'>
-          <img src={Image2} alt='soap name' className='rounded-4xl w-full' />
+          <img src={story2} alt='soap name' className='rounded-4xl w-full' />
         </div>
         <div className='flex-1'>
-          <img src={Image3} alt='soap name' className='rounded-4xl w-full' />
+          <img src={story3} alt='soap name' className='rounded-4xl w-full' />
         </div>
         <div className='flex-1'>
-          <img src={Image4} alt='soap name' className='rounded-4xl w-full' />
+          <img src={story4} alt='soap name' className='rounded-4xl w-full' />
         </div>
       </div>
     </section>

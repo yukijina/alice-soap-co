@@ -1,12 +1,12 @@
-import workImg from '../../../assets/work-1.jpeg';
-import avatarImg from '../../../assets/avatar.png';
+import roots from '../../../assets/our-roots.jpeg';
+import avatar from '../../../assets/avatar.png';
 
 function OurRoot() {
   return (
     <section className='section-px bg-orange-100 flex py-20 gap-20'>
       <div>
         <img
-          src={workImg}
+          src={roots}
           alt='Handcrafted soap making'
           className='rounded object-cover'
         />
@@ -30,7 +30,7 @@ function OurRoot() {
 
         <div className='flex gap-3 items-center mt-10'>
           <img
-            src={avatarImg}
+            src={avatar}
             alt='Founder of Alice Soap Co.'
             className='w-12 h-12 rounded-4xl'
           />

@@ -1,5 +1,5 @@
 import { CiHeart } from 'react-icons/ci';
-import heroImg from '../../../assets/hero.jpeg';
+import hero from '../../../assets/hero.jpeg';
 import Button from '../../../components/Button';
 
 function Hero() {
@@ -30,7 +30,7 @@ function Hero() {
 
       <div>
         <img
-          src={heroImg}
+          src={hero}
           alt='soap'
           className='w-164 [clip-path:inset(0%_round_60px_60px_60px_60px)]'
         />

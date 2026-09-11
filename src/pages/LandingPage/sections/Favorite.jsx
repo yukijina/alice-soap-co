@@ -1,5 +1,7 @@
 // place holder image
-import soapImg from '../../../assets/aux-1a.png';
+import favorite1 from '../../../assets/favorite-1.png';
+import favorite2 from '../../../assets/favorite-2.png';
+import favorite3 from '../../../assets/favorite-3.png';
 import Button from '../../../components/Button';
 
 function Favorite() {
@@ -14,51 +16,52 @@ function Favorite() {
       </div>
 
       {/* #1 soap */}
-      <div className='flex gap-10'>
-        <section>
-          <img src={soapImg} alt='soap name' className='rounded-4xl' />
-          <div className='flex justify-between items-center mt-5 mb-2'>
-            <h3>Mission Apricot & Clay</h3>
-            <p className='font-semibold'>$16.00</p>
-          </div>
-          <div className='flex flex-col items-end'>
+      <div className='flex justfiy-center gap-10'>
+        <section className='flex-1'>
+          <img
+            src={favorite1}
+            alt='soap name'
+            className='rounded-4xl object-cover w-full h-70'
+          />
+
+          <div className=' mt-5 mb-2'>
+            <h3>Chamomile Dream</h3>
             <p>
-              French pink clay and sun-ripened apricot kernel oil. Highly
-              moisturizing.
+              A delicate floral bar with a soothing herbal character crafted for
+              a peaceful evening bathing ritual.
             </p>
-            <a href='#'>Add Cart +</a>
           </div>
         </section>
 
         {/* #2 soap */}
-        <section>
-          <img src={soapImg} alt='soap name' className='rounded-4xl' />
-          <div className='flex justify-between items-center mt-5 mb-2'>
-            <h3>Mission Apricot & Clay</h3>
-            <p className='font-semibold'>$16.00</p>
-          </div>
-          <div className='flex flex-col items-end'>
+        <section className='flex-1'>
+          <img
+            src={favorite2}
+            alt='soap name'
+            className='rounded-4xl object-cover w-full h-70'
+          />
+          <div className='mt-5 mb-2'>
+            <h3>Sandalwood Fig</h3>
             <p>
-              French pink clay and sun-ripened apricot kernel oil. Highly
-              moisturizing.
+              A refined earthy luxury bar combining creamy fig with warm
+              sandalwood for a sophisticated bathing experience.
             </p>
-            <a href='#'>Add Cart +</a>
           </div>
         </section>
 
         {/* #3 soap */}
-        <section>
-          <img src={soapImg} alt='soap name' className='rounded-4xl' />
-          <div className='flex justify-between items-center mt-5 mb-2'>
-            <h3>Mission Apricot & Clay</h3>
-            <p className='font-semibold'>$16.00</p>
-          </div>
-          <div className='flex flex-col items-end'>
+        <section className='flex-1'>
+          <img
+            src={favorite3}
+            alt='soap name'
+            className='rounded-4xl object-cover w-full h-70'
+          />
+          <div className='mt-5 mb-2'>
+            <h3>Cedar Sage</h3>
             <p>
-              French pink clay and sun-ripened apricot kernel oil. Highly
-              moisturizing.
+              A sophisticated botanical bar inspired by the earthy landscapes of
+              Northern California with a clean and grounding character.
             </p>
-            <a href='#'>Add Cart +</a>
           </div>
         </section>
       </div>
