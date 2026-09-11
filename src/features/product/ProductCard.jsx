@@ -11,7 +11,8 @@ import Popup from '../../components/Popup';
 import { CiFaceSmile } from 'react-icons/ci';
 
 function ProductCard({ product }) {
-  const { id, name, description, scentNote, ingredients, image } = product;
+  const { id, name, description, scentNote, ingredients, image, price } =
+    product;
   const dispatch = useDispatch();
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const currentQuantity = useSelector(getCurrentQuantityById(id));
@@ -22,8 +23,8 @@ function ProductCard({ product }) {
       itemId: id,
       itemName: name,
       quantity: 1,
-      // unitPrice: price,
-      // totalPrice: price * 1,
+      unitPrice: price,
+      totalPrice: price * 1,
       image,
     };
     dispatch(addItem(newItem));
@@ -46,18 +47,21 @@ function ProductCard({ product }) {
   }
 
   return (
-    <div className='isolate relative bg-orange-100 rounded-2xl py-5 px-3 w-100 h-120'>
-      <div className='flex justify-center pb-12'>
-        <img src={image} alt={name} className='size-60 object-contain' />
+    <div className='bg-orange-100 rounded-2xl py-5 px-3 w-100 h-120 flex flex-col justify-center'>
+      {/* apply link inside this div */}
+      <div className='isolate relative'>
+        <div className='flex justify-center pb-10'>
+          <img src={image} alt={name} className='size-60 object-contain' />
+        </div>
+        <h5>
+          <Link to={`/shop-all/${id}`}>
+            <span className='absolute inset-0 z-10'></span>
+            {name}
+          </Link>
+        </h5>
+        <p className='text-stone-500'>{scentNote}</p>
+        <p className='font-semibold mb-5'>US$ {price}</p>
       </div>
-      <h5>
-        <Link to={`/shop-all/${id}`}>
-          <span className='absolute inset-0 z-10'></span>
-          {name}
-        </Link>
-      </h5>
-      <p className='text-stone-500 mb-3'>{scentNote}</p>
-      <p className='font-semibold mb-2'>US$ defalt Price</p>
 
       {/* If the item is already in the cart, item's quantity is increase, if not. it will be added to the cart */}
       <Button
