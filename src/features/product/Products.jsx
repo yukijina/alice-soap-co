@@ -4,8 +4,11 @@ import { getProducts } from '../../services/apiProducts';
 import ProductCard from './ProductCard';
 import header from '../../assets/products-header.jpeg';
 
+let cachedProducts = null;
+
 function Products() {
   const products = useLoaderData();
+  // console.log(products);
 
   return (
     <div className='section-px my-20'>
@@ -28,7 +31,14 @@ function Products() {
 }
 
 export async function loader() {
+  // fetch only once as this website remains same products, not necessary to fetch all data again
+  if (cachedProducts) {
+    console.log('Serving data from local storage');
+    return cachedProducts;
+  }
+
   const items = await getProducts();
+  cachedProducts = items;
   return items;
 }
 
