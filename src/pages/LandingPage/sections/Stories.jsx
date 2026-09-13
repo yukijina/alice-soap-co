@@ -10,7 +10,11 @@ function Stories() {
       <h4>&#9679; Alice's Communal</h4>
       <div className='flex justify-between items-center'>
         <h2>Alice's Soap stories on Instagram</h2>
-        <a href='#' className='text-lime-800 flex gap-2 items-center'>
+        <a
+          href='https://www.instagram.com'
+          target='_blank'
+          className='text-lime-800 flex gap-2 items-center'
+        >
           <CiInstagram />
           <span className='text-sm '>Alice's Soap Store Co.</span>
         </a>

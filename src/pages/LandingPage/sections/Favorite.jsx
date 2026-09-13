@@ -10,7 +10,7 @@ function Favorite() {
       <h4>&#9679; Curated Favorites</h4>
       <div className='flex justify-between items-center'>
         <h2>Bars of pure skin nourishment</h2>
-        <Button to='/product' type='light'>
+        <Button to='/shop-all' type='light'>
           View Full Soap &rarr;
         </Button>
       </div>

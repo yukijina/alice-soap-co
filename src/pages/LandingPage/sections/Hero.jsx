@@ -17,7 +17,7 @@ function Hero() {
           <Button to='/shop-all' type='dark'>
             Shop the Collection
           </Button>
-          <Button to='#' type='light'>
+          <Button to='/our-booth' type='light'>
             Find our Market Booth
           </Button>
         </div>

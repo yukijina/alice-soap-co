@@ -42,7 +42,7 @@ function Spotlight() {
           </div>
         </div>
         <div className='my-10'>
-          <Button to='/product' type='dark'>
+          <Button to='/shop-all' type='dark'>
             Shop the Collection
           </Button>
         </div>
