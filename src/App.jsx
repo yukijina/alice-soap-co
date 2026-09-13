@@ -3,6 +3,7 @@ import AppLayout from './layout/AppLayout';
 import Error from './pages/Error';
 import Home from './pages/LandingPage/Home';
 import OurStoryPage from './pages/OurStoryPage';
+import OurBoothPage from './pages/OurBoothPage';
 import CartPage from './pages/CartPage';
 import CheckoutPage from './pages/CheckoutPage';
 import { action as createOrderAction } from './features/address/AddressForm';
@@ -13,6 +14,7 @@ import ProductDetails, {
 import Products, {
   loader as productsLoader,
 } from './features/product/Products';
+import SoapQuizPage from './pages/SoapQuizPage';
 
 const router = createBrowserRouter([
   {
@@ -30,6 +32,7 @@ const router = createBrowserRouter([
         path: '/shop-all',
         element: <Products />,
         loader: productsLoader,
+        errorElement: <Error />,
       },
       {
         path: '/shop-all/:productId',
@@ -44,6 +47,8 @@ const router = createBrowserRouter([
       },
       { path: '/order-confirmation', element: <OrderConfirmationPage /> },
       { path: '/our-story', element: <OurStoryPage /> },
+      { path: '/our-booth', element: <OurBoothPage /> },
+      { path: '/soap-quiz', element: <SoapQuizPage /> },
     ],
   },
 ]);
