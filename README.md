@@ -1,16 +1,60 @@
-# React + Vite
+# Alice Luxury Soap E-commerce Web Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive e-commerce web application for **ALICE Luxury Soap**, a fictional small-batch luxury soap brand based in San Francisco.
 
-Currently, two official plugins are available:
+This project was created as a portfolio project to demonstrate frontend development skills including React component architecture, state management, API integration, routing, responsive design, and interactive e-commerce functionality.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Live Demo
 
-## React Compiler
+[View Live Demo](YOUR_LIVE_DEMO_URL)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+- Responsive e-commerce layout for desktop, tablet, and mobile
+- Product listing and product detail pages
+- Dynamic product data fetched from Supabase
+- Add products to shopping cart
+- Update product quantities
+- Remove products from cart
+- Shopping cart state management with Redux Toolkit
+- Checkout flow
+- Order confirmation page
+- Client-side navigation with React Router
+- Responsive navigation menu
+- Interactive UI components
+- Custom 404 error page
+- Empty cart state
+- Simple soap knowledge quiz
+- Farmers market / story section
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## Technologies
+
+### Frontend
+
+- React
+- JavaScript
+- HTML5
+- CSS3
+- Tailwind CSS
+
+### State Management
+
+- Redux Toolkit
+- React Redux
+
+### Routing
+
+- React Router
+
+### Backend / Data
+
+- Supabase
+- PostgreSQL
+
+### Development Tools
+
+- Vite
+- Git
+- GitHub
