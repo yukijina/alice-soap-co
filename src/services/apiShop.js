@@ -9,9 +9,10 @@ const API_URL = 'https://fakestoreapi.com';
 //   return data;
 // }
 
+// Pending POST
 // export async function createOrder(newOrder) {
 export async function createOrder() {
-  // test data
+  //test data
   const newOrder = [
     {
       id: 0,
@@ -37,7 +38,7 @@ export async function createOrder() {
         'Content-Type': 'application/json',
       },
     });
-    console.log(res);
+    // console.log(res);
     if (!res.ok) throw Error();
     const { data } = await res.json();
     return data;

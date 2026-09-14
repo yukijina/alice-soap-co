@@ -10,7 +10,7 @@ function CheckoutSummary() {
   const tax = 0;
   const totalPrice = totalCartPrice + shippingCost + tax;
   const location = useLocation();
-  console.log(location.pathname);
+  // console.log(location.pathname);
 
   return (
     <div

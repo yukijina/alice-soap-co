@@ -189,7 +189,6 @@ export async function action({ request }) {
     orderNumber,
   };
 
-  console.log(order.orderNumber);
   const errors = {};
   if (!isValidPhone(order.phone))
     errors.phone =
@@ -200,7 +199,7 @@ export async function action({ request }) {
 
   if (Object.keys(errors).length > 0) return errors;
 
-  console.log(errors);
+  // console.log(errors);
   // if there is no errors, create new order
   const newOrder = await createOrder(order);
   store.dispatch(clearCart());
