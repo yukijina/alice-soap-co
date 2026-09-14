@@ -29,7 +29,7 @@ function Footer() {
             Alice's story
           </Link>
           <a
-            href='https://www.instagram.com'
+            href='#'
             target='_blank'
             className='text-stone-500 text-sm block tracking-wider leading-relaxed'
           >
