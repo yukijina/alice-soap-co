@@ -49,7 +49,7 @@ function ProductDetails() {
   }
 
   return (
-    <section className='section-px flex my-10'>
+    <section className='section-px flex my-10 flex-col md:flex-row'>
       <div>
         <img src={image} alt={name} />
       </div>

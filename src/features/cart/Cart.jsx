@@ -36,11 +36,11 @@ function Cart({ cart }) {
   // const cart = useSelector((state) => state.cart.cart);
 
   return (
-    <div className='basis-2xl'>
+    <div className='basis-0 md:basis-2xl'>
       <h3 className='font-instrument'>
         Your Cart <span className='text-sm'>({cart.length} item)</span>
       </h3>
-      <div className='mt-10'>
+      <div className='mt-5 md:mt-10'>
         {cart.map((item) => (
           <CartItem item={item} key={item.itemId} />
         ))}

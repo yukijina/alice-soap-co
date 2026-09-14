@@ -4,11 +4,15 @@ function Button({ children, to, type, onClick }) {
   const navigate = useNavigate();
 
   const base =
-    'inline-block text-sm rounded-full font-semibold tracking-wide transition-colors duration-300 focus:outline-none focus:ring focus:ring-taupe-700 focus:ring-offset-2';
+    'inline-block text-sm rounded-full font-semibold text-center tracking-wide transition-colors duration-300 focus:outline-none focus:ring focus:ring-taupe-700 focus:ring-offset-2';
 
   const styles = {
-    dark: base + ' bg-taupe-800 text-slate-50 hover:bg-taupe-700 px-6 py-3',
-    light: base + ' border border-taupe-800 hover:bg-amber-100 px-6 py-3',
+    dark:
+      base +
+      ' bg-taupe-800 text-slate-50 hover:bg-taupe-700 px-4 py-2 md:px-6 py-3',
+    light:
+      base +
+      ' border border-taupe-800 hover:bg-amber-100 px-4 py-2 md:px-6 py-3',
     round: base + ' bg-taupe-800 text-slate-50 hover:bg-taupe-700 px-2',
   };
 

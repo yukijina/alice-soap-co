@@ -3,8 +3,8 @@ import avatar from '../../../assets/avatar.png';
 
 function OurRoot() {
   return (
-    <section className='section-px bg-orange-100 flex py-20 gap-20'>
-      <div>
+    <section className='section-px bg-orange-100 flex py-20 gap-20 flex-col lg:flex-row'>
+      <div className='order-2 lg:order-1'>
         <img
           src={roots}
           alt='Handcrafted soap making'
@@ -12,7 +12,7 @@ function OurRoot() {
         />
       </div>
 
-      <div>
+      <div className='order-1 lg:order-2'>
         <h4>&#9679; Our Roots</h4>
         <h2>Handcrafted in SF, loved at the local markets</h2>
         <p>

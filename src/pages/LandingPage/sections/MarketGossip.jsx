@@ -7,7 +7,7 @@ function MarketGossip() {
         Shared wisdom from our health-conscious neighbors
       </h2>
 
-      <div className='flex gap-10'>
+      <div className='flex gap-10 flex-col lg:flex-row'>
         <section className='bg-amber-50 rounded-2xl px-5 py-5'>
           <p className=' text-orange-300 text-5xl'>&ldquo;</p>
           <p className='italic'>

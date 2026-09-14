@@ -8,15 +8,15 @@ function Stories() {
   return (
     <section className='section-px py-20'>
       <h4>&#9679; Alice's Communal</h4>
-      <div className='flex justify-between items-center'>
+      <div className='flex justify-between items-center flex-col md:flex-row'>
         <h2>Alice's Soap stories on Instagram</h2>
         <a
           href='https://www.instagram.com'
           target='_blank'
-          className='text-lime-800 flex gap-2 items-center'
+          className='text-lime-800 mb-6'
         >
-          <CiInstagram />
-          <span className='text-sm '>Alice's Soap Store Co.</span>
+          <CiInstagram className='inline-block' />
+          <span className='text-sm pl-1'>Alice's Soap Store Co.</span>
         </a>
       </div>
 

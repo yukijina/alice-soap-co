@@ -13,11 +13,17 @@ function CheckoutSummary() {
   console.log(location.pathname);
 
   return (
-    <div className='flex flex-col items-center'>
+    <div
+      className={`flex flex-col md:items-center md:order-2 ${
+        location.pathname === '/checkout' && 'order-1'
+      }`}
+    >
       <table className='table-auto mb-5'>
         <thead>
           <tr>
-            <th className='text-lg pb-10'>Order Summary</th>
+            <th className='text-lg pb-5 font-semibold leading-lg text-left md:pb-10 '>
+              Order Summary
+            </th>
           </tr>
         </thead>
         <tbody className='bg-orange-100'>

@@ -46,11 +46,11 @@ function AddressForm() {
   const totalCartPrice = useSelector(getTotalCartPrice);
 
   return (
-    <div className=''>
+    <div className='order-2 md:order-1'>
       <h3 className='font-instrument'>Shipping Address</h3>
 
       <Form className='mt-5' method='POST'>
-        <div className='flex gap-3'>
+        <div className='flex gap-2 flex-col sm:flex-row'>
           <div className='mb-3 flex flex-col gap-2'>
             <label className='text-sm' htmlFor='first-name'>
               First Name
@@ -137,7 +137,7 @@ function AddressForm() {
             required
           />
 
-          <div className='flex gap-2'>
+          <div className='flex gap-2 mb-5 flex-col sm:flex-row'>
             <input
               className='rounded-md bg-white px-3 py-2 outline-1 outline-offset-1 outline-gray-300 focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-amber-500'
               type='text'
@@ -154,6 +154,7 @@ function AddressForm() {
               required
             />
           </div>
+
           {formErrors?.zipCode && (
             <p className='mt-2 rounded-md bg-red-100 p-2 text-xs text-red-700 w-50'>
               {formErrors.zipCode}

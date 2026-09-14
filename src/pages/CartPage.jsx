@@ -19,7 +19,7 @@ function CartPage() {
           purchase.
         </p>
       </div>
-      <div className='flex justify-center gap-20'>
+      <div className='flex justify-center flex-col gap-10 md:flex-row md:gap-10 lg:gap-20'>
         <Cart cart={cart} />
         <CheckoutSummary totalCartPrice={totalCartPrice} />
       </div>

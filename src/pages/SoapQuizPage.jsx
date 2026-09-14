@@ -38,7 +38,7 @@ function SoapQuizPage() {
   ];
 
   return (
-    <section className='section-px my-20 h-[80vh]'>
+    <section className='section-px my-20 lg:h-[80vh]'>
       <h2>The Suds & Science Soap Quiz</h2>
       <h4>Bubble Buddies Trivia Time!</h4>
       <Accordion items={faqData} />

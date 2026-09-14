@@ -8,7 +8,7 @@ function Favorite() {
   return (
     <section className='section-px py-20'>
       <h4>&#9679; Curated Favorites</h4>
-      <div className='flex justify-between items-center'>
+      <div className='flex justify-between items-center flex-col mb-8 md:flex-row'>
         <h2>Bars of pure skin nourishment</h2>
         <Button to='/shop-all' type='light'>
           View Full Soap &rarr;
@@ -16,12 +16,12 @@ function Favorite() {
       </div>
 
       {/* #1 soap */}
-      <div className='flex justfiy-center gap-10'>
+      <div className='flex justfiy-center gap-10 flex-col md:flex-row'>
         <section className='flex-1'>
           <img
             src={favorite1}
             alt='soap name'
-            className='rounded-4xl object-cover w-full h-70'
+            className='rounded-4xl object-cover w-full lg:h-70 h-50'
           />
 
           <div className=' mt-5 mb-2'>
@@ -34,11 +34,12 @@ function Favorite() {
         </section>
 
         {/* #2 soap */}
+
         <section className='flex-1'>
           <img
             src={favorite2}
             alt='soap name'
-            className='rounded-4xl object-cover w-full h-70'
+            className='rounded-4xl object-cover w-full lg:h-70 h-50'
           />
           <div className='mt-5 mb-2'>
             <h3>Sandalwood Fig</h3>
@@ -54,7 +55,7 @@ function Favorite() {
           <img
             src={favorite3}
             alt='soap name'
-            className='rounded-4xl object-cover w-full h-70'
+            className='rounded-4xl object-cover w-full lg:h-70 h-50'
           />
           <div className='mt-5 mb-2'>
             <h3>Cedar Sage</h3>

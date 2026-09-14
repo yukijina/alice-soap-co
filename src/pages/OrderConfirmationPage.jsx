@@ -14,10 +14,8 @@ function OrderConfirmationPage() {
         <span className='font-semibold'>12345.</span>
       </h4>
 
-      <div>
-        <p>This page will be automaticallyredirect to Home.</p>
-        <p>Or you can go back to home page &darr;</p>
-      </div>
+      <p className='mb-5'>You can go back to home page &darr;</p>
+
       <Button to='/' type='dark'>
         Go back to Home
       </Button>

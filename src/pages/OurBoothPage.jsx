@@ -2,10 +2,10 @@ import boothImage from '../assets/booth.png';
 
 function OurBoothPage() {
   return (
-    <section className='section-px my-20 h-[80vh]'>
+    <section className='section-px my-20 lg:h-[80vh]'>
       <h2>Come Find Us at the Ferry Building Farmers Market</h2>
-      <div className='flex gap-5'>
-        <div className='w-1/2'>
+      <div className='flex gap-5 flex-col lg:flex-row'>
+        <div className='lg:w-1/2'>
           <h4>We’d love to see you at there!</h4>
           <p>
             Visit our booth at San Francisco's beloved Ferry Building Farmers
@@ -21,7 +21,7 @@ function OurBoothPage() {
           </p>
         </div>
 
-        <div className='w-1/2'>
+        <div className='lg:w-1/2'>
           <img
             className='rounded-4xl'
             src={boothImage}

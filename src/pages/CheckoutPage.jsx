@@ -4,7 +4,7 @@ import CheckoutSummary from '../features/checkout/CheckoutSummary';
 function CheckoutPage() {
   return (
     <section className='section-px my-20 '>
-      <div className='flex justify-center gap-20'>
+      <div className='flex justify-center flex-col gap-10 md:flex-row md:gap-10 lg:gap-20'>
         <AddressForm />
         <CheckoutSummary />
       </div>

@@ -9,9 +9,9 @@
 
 @layer base {
   h1 {
-    font-size: var(--text-6xl);
+    font-size: var(--text-5xl);
     font-family: var(--font-cormorant);
-    line-height: var(--text-6xl);
+    line-height: var(--text-5xl);
     margin-bottom: 3rem;
   }
   h2 {
@@ -47,6 +47,14 @@
   li {
     font-family: var(--font-instrument);
     font-weight: 300;
+  }
+
+  /* Responsive media query */
+  @variant lg {
+    h1 {
+      font-size: var(--text-6xl);
+      line-height: var(--text-6xl);
+    }
   }
 }
 

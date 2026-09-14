@@ -4,7 +4,7 @@ import Button from '../../../components/Button';
 
 function Hero() {
   return (
-    <main className='my-20 flex items-center gap-20 section-px'>
+    <main className='section-px my-20 flex items-center gap-20 flex-col md:flex-row'>
       <div>
         <h4>&#9679; Alice Cold-Pressed Soap</h4>
         <h1>Handcrafted luxury, cured in the San Francisco fog</h1>
@@ -13,7 +13,7 @@ function Hero() {
           botanicals, mineral-rich clays, and local olive oil. Hand-poured,
           hand-cut, and slow-cured right here in San Francisco.
         </p>
-        <div className='my-10 flex gap-1'>
+        <div className='my-10 flex gap-1 justify-center md:justify-normal'>
           <Button to='/shop-all' type='dark'>
             Shop the Collection
           </Button>

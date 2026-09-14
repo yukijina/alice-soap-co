@@ -3,11 +3,11 @@ import ourStoryImage from '../assets/ourstory.png';
 
 function OurStoryPage() {
   return (
-    <div className='section-px my-20 h-[80vh]'>
+    <div className='section-px my-20 lg:h-[80vh]'>
       <h2>About this website</h2>
 
-      <div className='flex gap-10'>
-        <div className='w-1/2'>
+      <div className='flex gap-10 flex-col lg:flex-row'>
+        <div className='lg:w-1/2'>
           <h4>Disclaimer</h4>
           <p>
             This website is a design and development project created for
@@ -29,7 +29,7 @@ function OurStoryPage() {
             <CiHeart className='inline text-red-600' />
           </p>
         </div>
-        <div className='w-1/2'>
+        <div className='lg:w-1/2'>
           <img
             className='rounded-4xl'
             src={ourStoryImage}

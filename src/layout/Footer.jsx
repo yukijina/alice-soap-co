@@ -5,7 +5,7 @@ import { currentYear } from '../utils/helpers';
 function Footer() {
   return (
     <footer className='section-px py-20 bg-orange-100 '>
-      <div className='flex justify-between gap-15'>
+      <div className='flex justify-between flex-col gap-6 lg:flex-row lg:gap-15'>
         <section className='grow'>
           <img src='/logo.svg' alt='Alice Soap Co. logo' className='w-23' />
           <p className='text-lime-800 text-sm'>San Francisco</p>
@@ -68,8 +68,9 @@ function Footer() {
           </a>
         </section>
       </div>
+
       <hr className='mt-30 mb-5 text-lime-800 opacity-10' />
-      <div className='flex justify-between text-stone-500 text-xs'>
+      <div className='flex justify-between text-stone-500 text-xs flex-col gap-1 md:flex-row'>
         <p>
           &copy; {currentYear} Hand-poured with love in San Francisco. All
           rights reserved.

@@ -12,7 +12,7 @@ function Philosophy() {
         Formulated with strict purity, designed for luxurious bathing rituals
       </h2>
 
-      <div className='flex gap-10'>
+      <div className='flex gap-10 lg:flex-row flex-col'>
         <section className='bg-amber-50 rounded-2xl px-5 py-5'>
           <div className='py-2 w-10 mb-5 bg-orange-200 rounded-3xl'>
             <CiDroplet className='color-lime-800 text-2xl m-auto' />
