@@ -23,7 +23,7 @@ function CartItem({ item }) {
 
   return (
     <div className='mb-3 bg-orange-100'>
-      <div className='flex justify-between gap-3 px-5 py-6'>
+      <div className='flex justify-between items-center gap-1 sm:gap-3 px-5 py-6'>
         <div className='basis-20'>
           <img src={image} alt={itemName} />
         </div>
@@ -38,7 +38,7 @@ function CartItem({ item }) {
           </button>
 
           {/* update quantity */}
-          <p>Quantity</p>
+          <p className='text-xs sm:text-base'>Quantity</p>
           <div className='flex gap-5'>
             <Button
               type='round'
