@@ -4,10 +4,6 @@ A responsive e-commerce web application for **ALICE Luxury Soap**, a fictional s
 
 This project was created as a portfolio project to demonstrate frontend development skills including React component architecture, state management, API integration, routing, responsive design, and interactive e-commerce functionality.
 
-## Live Demo
-
-[View Live Demo](YOUR_LIVE_DEMO_URL)
-
 ## Features
 
 - Responsive e-commerce layout for desktop, tablet, and mobile
